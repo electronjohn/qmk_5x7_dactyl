@@ -13,6 +13,7 @@
 #define TAB_R  LCTL(KC_TAB)
 #define TAB_L  LCTL(LSFT(KC_TAB))
 #define TAB_RO LCTL(LSFT(KC_T))
+#define EXPOSE LCTL(KC_UP)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_5x7(
@@ -21,17 +22,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,    KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,   KC_LBRC,
         KC_LCTL,   KC_A,    KC_S,    KC_D,   KC_F,   KC_G,   TAB_RO,
         OSM(MOD_LSFT),   KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,
-        KC_CAPS,   KC_LCTL, KC_LALT,   KC_LCTL,
-                                    KC_DOWN, KC_SPC,
+        KC_CAPS,   KC_TAB, KC_LALT,   KC_LGUI,
+                                    EXPOSE, KC_SPC,
                                     KC_BSPC, KC_ENT, 
-                                    KC_NO, KC_NO, 
+                                    KC_NO, KC_LGUI, 
         // right hand
                           KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS,  KC_EQL,   KC_GRV,
                           KC_RBRC, KC_Y,    KC_U,    KC_I,     KC_O,     KC_P,     KC_BSLS,
                       TG(_NUMPAD), KC_H,    KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
                                    KC_N,    KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  OSM(MOD_RSFT),
                                             KC_LEFT, KC_UP,    KC_DOWN,  KC_RGHT,
-             KC_BSPC, KC_ENT,
+             KC_BSPC, KC_LALT,
              KC_PGUP, KC_SPC,
              KC_LCTL, KC_LALT
     ),
